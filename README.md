@@ -19,7 +19,7 @@ scRNA data and analysis:
 * https://www.encodeproject.org/experiments/ENCSR000AJE/
 * [single cell ATAC-seq data](https://www.nature.com/nature/journal/v523/n7561/pdf/nature14590.pdf)
 * [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) - Human scRNA-seq Database
-* [Brief Review of scRNA-Seq Tools] (https://www.nature.com/news/single-cell-sequencing-made-simple-1.22233)
+* [Brief Review of scRNA-Seq Tools](https://www.nature.com/news/single-cell-sequencing-made-simple-1.22233)
 
 Here are some other papers with single-cell RNA data, these from brain. I've already downloaded all this data:
 
