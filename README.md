@@ -13,11 +13,13 @@ Maching learning links:
 * [R tensorflow](https://github.com/rstudio/tensorflow)
 * [TensorFlow](https://www.tensorflow.org/) - Google's deep learning library
 
-ssRNA data and analysis:
+scRNA data and analysis:
 * [Seurat](http://satijalab.org/seurat/) - R package for unsupervised analysis and visualization
 * https://www.encodeproject.org/search/?searchTerm=GM12878&type=Experiment&assay_title=single+cell+RNA-seq 
 * https://www.encodeproject.org/experiments/ENCSR000AJE/
 * [single cell ATAC-seq data](https://www.nature.com/nature/journal/v523/n7561/pdf/nature14590.pdf)
+* [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) - Human scRNA-seq Database
+* [Brief Review of scRNA-Seq Tools] (https://www.nature.com/news/single-cell-sequencing-made-simple-1.22233)
 
 Here are some other papers with single-cell RNA data, these from brain. I've already downloaded all this data:
 
@@ -29,3 +31,6 @@ Patel, A. P.; Tirosh, I.; Trombetta, J. J.; Shalek, A. K.; Gillespie, S. M.; Wak
 Pipeline development links:
 * [Looper](http://looper.readthedocs.io/) - my python package that submits pipelines to clusters
 * [Pypiper](http://pypiper.readthedocs.io/) - my python package for building pipelines
+
+Notes on approaches taken:
+* In two scRNA-seq cancer studies, groups identified tumor malignancy/state using CNV analysis of scRNA-seq data (average of normalized expression levels over relatively large streches of the genome).  This tended to be followed by unsupervised clustering and expression of key marker genes to identify cell types.  One group identified critical/disease distinguishing genes by their principal component loadings/correlation to PC1, PC2 or PC3.  This last step is where supverised machine learning approaches could do a better job.   
