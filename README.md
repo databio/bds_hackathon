@@ -12,7 +12,6 @@ Maching learning links:
 * [mlr R package](https://cran.r-project.org/web/packages/mlr/index.html) - Universal R interface to various tools.
 * [R tensorflow](https://github.com/rstudio/tensorflow)
 * [TensorFlow](https://www.tensorflow.org/) - Google's deep learning library
-
 * [Hu et al. 2016](https://www.ncbi.nlm.nih.gov/pubmed/28155657) - BMC Genomics paper on supervised classification of single-cell RNA. *A machine learning approach for the identification of key markers involved in brain development from single-cell transcriptomic data.*
 
 scRNA  analysis:
@@ -24,13 +23,9 @@ scRNA data:
 * https://www.encodeproject.org/experiments/ENCSR000AJE/
 * [single cell ATAC-seq data](https://www.nature.com/nature/journal/v523/n7561/pdf/nature14590.pdf)
 * [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) - Human scRNA-seq Database
-* [Single-Cell Resolution of Temporal Gene Expression during Heart Development](https://www.ncbi.nlm.nih.gov/pubmed/27840107) - single-cell RNA sequencing of >1,200 murine cells isolated at seven time points spanning embryonic day 9.5 (primordial heart tube) to postnatal day 21 (mature heart). Using unbiased transcriptional data, we classified cardiomyocytes, endothelial cells, and fibroblast-enriched cells, thus identifying markers for temporal and chamber-specific developmental programs
-
-Here are some other papers with single-cell RNA data, these from brain. I've already downloaded all this data:
-
-Lake, B. B.; Ai, R.; Kaeser, G. E.; Salathia, N. S.; Yung, Y. C.; Liu, R.; Wildberg, A.; Gao, D.; Fung, H.-L.; Chen, S.; Vijayaraghavan, R.; Wong, J.; Chen, A.; Sheng, X.; Kaper, F.; Shen, R.; Ronaghi, M.; Fan, J.-B.; Wang, W.; Chun, J. & Zhang, K. Neuronal subtypes and diversity revealed by single-nucleus RNA sequencing of the human brain. Science (New York, N.Y.), 2016, 352, 1586-1590
-
-Patel, A. P.; Tirosh, I.; Trombetta, J. J.; Shalek, A. K.; Gillespie, S. M.; Wakimoto, H.; Cahill, D. P.; Nahed, B. V.; Curry, W. T.; Martuza, R. L.; Louis, D. N.; Rozenblatt-Rosen, O.; Suvà, M. L.; Regev, A. & Bernstein, B. E. Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma. Science (New York, N.Y.), 2014, 344, 1396-1401
+* [DeLaughter et al. 2017 ](https://www.ncbi.nlm.nih.gov/pubmed/27840107) - *Single-Cell Resolution of Temporal Gene Expression during Heart Development*. Single-cell RNA sequencing of >1,200 murine cells isolated at seven time points spanning embryonic day 9.5 (primordial heart tube) to postnatal day 21 (mature heart). Using unbiased transcriptional data, we classified cardiomyocytes, endothelial cells, and fibroblast-enriched cells, thus identifying markers for temporal and chamber-specific developmental programs
+* [Lake et al.](https://www.ncbi.nlm.nih.gov/pubmed/27339989) - *Neuronal subtypes and diversity revealed by single-nucleus RNA sequencing of the human brain.* Raw data is already available on Rivanna.
+* [Patel et al. 2014](https://www.ncbi.nlm.nih.gov/pubmed/24925914) *Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma.*
 
 
 Pipeline development links:
