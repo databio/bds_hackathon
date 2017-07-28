@@ -26,7 +26,8 @@ scRNA data:
 * [DeLaughter et al. 2017 ](https://www.ncbi.nlm.nih.gov/pubmed/27840107) - *Single-Cell Resolution of Temporal Gene Expression during Heart Development*. Single-cell RNA sequencing of >1,200 murine cells isolated at seven time points spanning embryonic day 9.5 (primordial heart tube) to postnatal day 21 (mature heart). Using unbiased transcriptional data, we classified cardiomyocytes, endothelial cells, and fibroblast-enriched cells, thus identifying markers for temporal and chamber-specific developmental programs
 * [Lake et al.](https://www.ncbi.nlm.nih.gov/pubmed/27339989) - *Neuronal subtypes and diversity revealed by single-nucleus RNA sequencing of the human brain.* Raw data is already available on Rivanna.
 * [Patel et al. 2014](https://www.ncbi.nlm.nih.gov/pubmed/24925914) *Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma.*
-
+* [Saliba et al. 2016](https://www.nature.com/articles/nmicrobiol2016206) *Single-cell RNA-seq ties macrophage polarization to growth rate of intracellular Salmonella*
+* [Avraham et al. 2015](https://www.ncbi.nlm.nih.gov/pubmed/26343579) *Pathogen Cell-to-Cell Variability Drives Heterogeneity in Host Immune Responses*
 
 Pipeline development links:
 * [Looper](http://looper.readthedocs.io/) - my python package that submits pipelines to clusters
