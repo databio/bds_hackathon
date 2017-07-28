@@ -13,13 +13,18 @@ Maching learning links:
 * [R tensorflow](https://github.com/rstudio/tensorflow)
 * [TensorFlow](https://www.tensorflow.org/) - Google's deep learning library
 
-scRNA data and analysis:
+* [Hu et al. 2016](https://www.ncbi.nlm.nih.gov/pubmed/28155657) - BMC Genomics paper on supervised classification of single-cell RNA. *A machine learning approach for the identification of key markers involved in brain development from single-cell transcriptomic data.*
+
+scRNA  analysis:
 * [Seurat](http://satijalab.org/seurat/) - R package for unsupervised analysis and visualization
+* [Brief Review of scRNA-Seq Tools](https://www.nature.com/news/single-cell-sequencing-made-simple-1.22233)
+
+scRNA data:
 * https://www.encodeproject.org/search/?searchTerm=GM12878&type=Experiment&assay_title=single+cell+RNA-seq 
 * https://www.encodeproject.org/experiments/ENCSR000AJE/
 * [single cell ATAC-seq data](https://www.nature.com/nature/journal/v523/n7561/pdf/nature14590.pdf)
 * [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) - Human scRNA-seq Database
-* [Brief Review of scRNA-Seq Tools](https://www.nature.com/news/single-cell-sequencing-made-simple-1.22233)
+* [Single-Cell Resolution of Temporal Gene Expression during Heart Development](https://www.ncbi.nlm.nih.gov/pubmed/27840107) - single-cell RNA sequencing of >1,200 murine cells isolated at seven time points spanning embryonic day 9.5 (primordial heart tube) to postnatal day 21 (mature heart). Using unbiased transcriptional data, we classified cardiomyocytes, endothelial cells, and fibroblast-enriched cells, thus identifying markers for temporal and chamber-specific developmental programs
 
 Here are some other papers with single-cell RNA data, these from brain. I've already downloaded all this data:
 
