@@ -1,5 +1,13 @@
 # BDS Hackathon
 
+## Schedule
+
+Date/Time: Nov 7th 9am - Nov 8th (midnight)
+Room: MR5 3005
+Datapalooza: Nov 9th-10th (Th-Fr)
+
+
+
 Some planning ideas (from aakrosh):
 
 * https://github.com/hackseq
@@ -34,4 +42,4 @@ Pipeline development links:
 * [Pypiper](http://pypiper.readthedocs.io/) - my python package for building pipelines
 
 Notes on approaches taken:
-* In two scRNA-seq cancer studies, groups identified tumor malignancy/state using CNV analysis of scRNA-seq data (average of normalized expression levels over relatively large streches of the genome).  This tended to be followed by unsupervised clustering and expression of key marker genes to identify cell types.  One group identified critical/disease distinguishing genes by their principal component loadings/correlation to PC1, PC2 or PC3.  This last step is where supverised machine learning approaches could do a better job.   
+* In two scRNA-seq cancer studies, groups identified tumor malignancy/state using CNV analysis of scRNA-seq data (average of normalized expression levels over relatively large stretches of the genome).  This tended to be followed by unsupervised clustering and expression of key marker genes to identify cell types.  One group identified critical/disease distinguishing genes by their principal component loadings/correlation to PC1, PC2 or PC3.  This last step is where supervised machine learning approaches could do a better job.   
