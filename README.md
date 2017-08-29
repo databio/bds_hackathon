@@ -3,7 +3,9 @@
 ## Schedule
 
 Date/Time: Nov 7th 9am - Nov 8th (midnight)
+
 Room: MR5 3005
+
 Datapalooza: Nov 9th-10th (Th-Fr)
 
 
