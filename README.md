@@ -33,6 +33,7 @@ scRNA data:
 * https://www.encodeproject.org/experiments/ENCSR000AJE/
 * [single cell ATAC-seq data](https://www.nature.com/nature/journal/v523/n7561/pdf/nature14590.pdf)
 * [scRNASeqDB](https://bioinfo.uth.edu/scrnaseqdb/) - Human scRNA-seq Database
+* [Villani & Satija et al. 2017](http://doi.org/10.1126/science.aah4573) - *Single-cell RNA-seq reveals new types of human blood dendritic cells, monocytes, and progenitors*. both processed and raw data available
 * [DeLaughter et al. 2017 ](https://www.ncbi.nlm.nih.gov/pubmed/27840107) - *Single-Cell Resolution of Temporal Gene Expression during Heart Development*. Single-cell RNA sequencing of >1,200 murine cells isolated at seven time points spanning embryonic day 9.5 (primordial heart tube) to postnatal day 21 (mature heart). Using unbiased transcriptional data, we classified cardiomyocytes, endothelial cells, and fibroblast-enriched cells, thus identifying markers for temporal and chamber-specific developmental programs
 * [Lake et al.](https://www.ncbi.nlm.nih.gov/pubmed/27339989) - *Neuronal subtypes and diversity revealed by single-nucleus RNA sequencing of the human brain.* Raw data is already available on Rivanna.
 * [Patel et al. 2014](https://www.ncbi.nlm.nih.gov/pubmed/24925914) *Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma.*
