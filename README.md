@@ -10,11 +10,11 @@ Datapalooza: Nov 9th-10th (Th-Fr)
 
 ## Overview
 
-Single-cell RNA-seq (ssRNA-seq) has now become routine, and there are hundreds of published datasets of single-cell RNA-seq data in various biological systems. One of the key applications of ssRNA-seq is to identify novel cell types that previously have been hidden due to population averaging. A typical analysis uses an unsupervised clustering (like t-SNE, PCA, or MDS) to visualize the high-dimensional expression data and identify clusters of individual cells. These clusters are then annotated *post-hoc* based on their gene expression patterns.
+Single-cell RNA-seq (scRNA-seq) has now become routine, and there are hundreds of published datasets of single-cell RNA-seq data in various biological systems. One of the key applications of scRNA-seq is to identify novel cell types that previously have been hidden due to population averaging. A typical analysis uses an unsupervised clustering (like t-SNE, PCA, or MDS) to visualize the high-dimensional expression data and identify clusters of individual cells. These clusters are then annotated *post-hoc* based on their gene expression patterns.
 
-Most effort has been in unsupervised analysis of ssRNA-seq data. We are now interested in applying supervised machine learning methods to build models that can classify individual cells into cell types. These models will be useful for two potential downstream applications:
+Most effort has been in unsupervised analysis of scRNA-seq data. We are now interested in applying supervised machine learning methods to build models that can classify individual cells into cell types. These models will be useful for two potential downstream applications:
 
-1. They could span multiple data sets and thereby build a pan-cell-type predictor that could be fed new ssRNA-seq data from a new experiment and be used to classify known cell types.
+1. They could span multiple data sets and thereby build a pan-cell-type predictor that could be fed new scRNA-seq data from a new experiment and be used to classify known cell types.
 
 2. They will provide a novel look at the feature set that defines a cell type, which is not revealed by the unsupervised methods.
 
