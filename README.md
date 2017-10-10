@@ -10,14 +10,17 @@ Datapalooza: Nov 9th-10th (Th-Fr)
 
 ## Overview
 
-Single-cell RNA-seq (scRNA-seq) has now become routine, and there are hundreds of published datasets of single-cell RNA-seq data in various biological systems. One of the key applications of scRNA-seq is to identify novel cell types that previously have been hidden due to population averaging. A typical analysis uses an unsupervised clustering (like t-SNE, PCA, or MDS) to visualize the high-dimensional expression data and identify clusters of individual cells. These clusters are then annotated *post-hoc* based on their gene expression patterns.
+Single-cell RNA-seq (scRNA-seq) has now become routine, and there are hundreds of published datasets of single-cell RNA-seq data in various biological systems. One of the key applications of scRNA-seq is to separate cell types. For example, studies may identify novel cell types that previously have been hidden due to population averaging; or, some studies use data to classify individual cells as cancer cells or normal cells, leading to cleaner expression profiles.
 
-Most effort has been in unsupervised analysis of scRNA-seq data. We are now interested in applying supervised machine learning methods to build models that can classify individual cells into cell types. These models will be useful for two potential downstream applications:
+A typical analysis uses an unsupervised clustering (like t-SNE, PCA, or MDS) to visualize the high-dimensional expression data and identify clusters of individual cells. These clusters are then annotated *post-hoc* based on their gene expression patterns. Most effort has been in unsupervised analysis of scRNA-seq data, and the features that define the differences in classification are then derived from the factors used in the cluster, but a supervised approach could provide a better way to identify salient features.
+
+Therefore, we are now interested in applying supervised machine learning methods to build models that can classify individual cells into cell types. These models will be useful for (at least) two potential downstream applications:
 
 1. They could span multiple data sets and thereby build a pan-cell-type predictor that could be fed new scRNA-seq data from a new experiment and be used to classify known cell types.
 
 2. They will provide a novel look at the feature set that defines a cell type, which is not revealed by the unsupervised methods.
 
+We should seek to build a reproducible piece of software that will enable others with scRNA-seq data to either re-run our analysis to build a predictor for the new dataset, or to use the predictor we have built to classify newly sequenced single cells.
 
 ## Tasks
 
