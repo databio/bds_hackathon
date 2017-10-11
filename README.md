@@ -49,6 +49,7 @@ Maching learning links:
 scRNA  analysis:
 * [Seurat](http://satijalab.org/seurat/) - R package for unsupervised analysis and visualization
 * [Brief Review of scRNA-Seq Tools](https://www.nature.com/news/single-cell-sequencing-made-simple-1.22233)
+* [CIDR](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1188-0) Unsupervised clustering method
 
 scRNA data:
 * https://www.encodeproject.org/search/?searchTerm=GM12878&type=Experiment&assay_title=single+cell+RNA-seq 
