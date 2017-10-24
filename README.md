@@ -30,6 +30,16 @@ We should seek to build a reproducible piece of software that will enable others
 - run unsupervised analysis (to categorize single-cells)
 - build various predictors
 
+## Compute organization
+
+Each of you should be a member of the `bds_tg` group on Rivanna. We have an allocation of disk space on Rivanna at `/sfs/lustre/allocations/bds_tg`. I suggest everyone set an environment variable to point to this for easy communication:
+```
+export BDSDATA="/sfs/lustre/allocations/bds_tg"
+```
+
+You should also have access to a compute credit allocation, also called `bds_tg` (use `allocations` to see yours).
+
+Please commit any code into this repository.
 
 ## Resources
 Some planning ideas (from aakrosh):
