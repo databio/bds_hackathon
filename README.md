@@ -24,11 +24,11 @@ We should seek to build a reproducible piece of software that will enable others
 
 ## Tasks
 
-- collect datasets (identify, download, and annotate data)
-- process data (from reads to counts files)
-- munge count output (from counts files to in-memory representation used as input to machine learning packages)
-- run unsupervised analysis (to categorize single-cells)
-- build various predictors
+1. collect datasets (identify, download, and annotate data)
+2. process data (from reads to counts files)
+3. munge count output (from counts files to in-memory representation used as input to machine learning packages)
+4. run unsupervised analysis (to categorize single-cells)
+5. build machine learning classifiers based on unsupervised results
 
 ## Compute organization
 
