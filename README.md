@@ -74,6 +74,8 @@ scRNA data:
 * [Patel et al. 2014](https://www.ncbi.nlm.nih.gov/pubmed/24925914) *Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma.*
 * [Saliba et al. 2016](https://www.nature.com/articles/nmicrobiol2016206) *Single-cell RNA-seq ties macrophage polarization to growth rate of intracellular Salmonella*
 * [Avraham et al. 2015](https://www.ncbi.nlm.nih.gov/pubmed/26343579) *Pathogen Cell-to-Cell Variability Drives Heterogeneity in Host Immune Responses*
+* [Habib et al. 2017](https://www.nature.com/nmeth/journal/v14/n10/full/nmeth.4407.html) - Dronc-seq
+* [Stoeckius et al. 2017](https://www.nature.com/nmeth/journal/v14/n9/full/nmeth.4380.html) - CITE-seq
 
 Pipeline development links:
 * [Looper](http://looper.readthedocs.io/) - my python package that submits pipelines to clusters
