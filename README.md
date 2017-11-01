@@ -24,13 +24,13 @@ We should seek to build a reproducible piece of software that will enable others
 
 ## Tasks
 
-We will first need to collect datasets (identify, download, and annotate data).
+We will first need to collect datasets (identify, download, and annotate data). There are then several stages in the process:
 
 
-1. process data (from reads to counts files). Starting with [this pipeline](https://github.com/databio/rnapipe), we can build a standard pipeline designed for single-cell data.
-3. munge count output (from counts files to in-memory representation used as input to machine learning packages). The pipeline will output a series of count files (one per cell). We will need to produce an R package that can read this output and produce an R object that is ready to insert to downstream analysis packages. We can base such an R package on the [pepr package](https://github.com/pepkit/pepr) for reading a project annotation sheet.
-4. run unsupervised analysis (to categorize single-cells)
-5. build machine learning classifiers based on unsupervised results
+1. process data (from reads to counts files). Starting with [this pipeline](https://github.com/databio/rnapipe), build a standard pipeline designed that uses [Looper](http://looper.readthedocs.io/) and [Pypiper](http://pypiper.readthedocs.io/) for single-cell data. This is a tool building task.
+2. munge count output (from counts files to in-memory representation used as input to machine learning packages). The pipeline (task #1) will output a series of count files (one per cell). We will need to produce an R package that can read this output on disk and produce an R object that is ready to insert to downstream analysis packages. We can base such an R package on the [pepr package](https://github.com/pepkit/pepr) for reading the same project annotation sheet that is used by looper. This is a tool building task.
+4. run unsupervised analysis (to categorize single-cells). Given an aggregated matrix of single-cell data, we can plug the data into unsupervised clustering analysis to define classes of cells. This is an analysis task.
+5. build machine learning classifiers based on unsupervised results. This is an analysis task.
 
 ## Compute organization
 
