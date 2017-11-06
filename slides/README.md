@@ -21,4 +21,12 @@ Focus your talk around your data-driven research as it relates to the Hackathon
 1. Slides will be due to Becca (via email rtl6m@virginia.edu or via [Box](https://virginia.box.com/s/0z4alrsytlc00qp5loujkzquaehuhb2q)) at **5:00pm on Thursday, November 9th**
 
 
+# Reveal.js alternative
 
+Write your slides in markdown, in [slides.md](slides.md), then make a presentation with pandoc:
+
+```
+pandoc -t revealjs -V revealjs-url=http://lab.hakim.se/reveal-js -s -o slides.html slides.md
+```
+
+This will produce the slideshow you see in [slides.html](slides.html).
