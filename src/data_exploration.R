@@ -60,4 +60,7 @@ plot(x,col=mouse_human_sums$color)
 #create a dataframe for humans, based on classification
 human = CBMC_rna[,which(mouse_human_sums$human_class)]
 
+#remove mouse genes
+human = human[human_gene_idx,]
+
 #length(which(mouse_human_sums$human_class)) / nrow(mouse_human_sums)
