@@ -1,4 +1,4 @@
-projectInit("bds_hackathon")
+projectInit("bds_hm)ackathon")
 # if you don't want to use dirOut():
 # dirOut = function() { return() }
 
@@ -22,6 +22,14 @@ datam = d[,-1]
 humanGenes = genes[,grepl("HUMAN_", V1)]
 
 humanGenes
+
+hCount = apply(datam[humanGenes,] > 0, 2, sum)
+mCount = apply(datam[!humanGenes,] > 0, 2, sum)
+
+sum(hCount > mCount)/ ncol(datam)
+
+
+
 
 rm(d)
 
