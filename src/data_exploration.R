@@ -1,8 +1,10 @@
 #install.packages('ltm')
 #library('ltm')
+options(BDSDATA = "/sfs/lustre/allocations/bds_tg/")
+dataDir = paste0(getOption("BDSDATA"), "citeseq/")
 
-CBMC_rna = read.csv("GSE100866_CBMC_8K_13AB_10X-RNA_umi.csv", stringsAsFactors = F, as.is = T, row.names = 1)
-CBMC_ADT = read.csv("GSE100866_CBMC_8K_13AB_10X-ADT_umi.csv", stringsAsFactors = F, as.is = T, row.names = 1)
+CBMC_rna = read.csv(paste0(dataDir,"GSE100866_CBMC_8K_13AB_10X-RNA_umi.csv"), stringsAsFactors = F, as.is = T, row.names = 1)
+CBMC_ADT = read.csv(paste0(dataDir,"GSE100866_CBMC_8K_13AB_10X-ADT_umi.csv"), stringsAsFactors = F, as.is = T, row.names = 1)
 
 
 
