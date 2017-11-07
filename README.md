@@ -57,6 +57,7 @@ scRNA  analysis:
 * [Seurat](http://satijalab.org/seurat/) - R package for unsupervised analysis and visualization
 * [Brief Review of scRNA-Seq Tools](https://www.nature.com/news/single-cell-sequencing-made-simple-1.22233)
 * [CIDR](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1188-0) Unsupervised clustering method
+* [scTDA](https://github.com/pcamara/scTDA) - topological data analysis of high-throughput single-cell RNA-seq data. From [Rizvi et al. 2017](https://www.nature.com/articles/nbt.3854).
 
 scRNA data:
 * https://www.encodeproject.org/search/?searchTerm=GM12878&type=Experiment&assay_title=single+cell+RNA-seq 
