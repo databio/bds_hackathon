@@ -33,6 +33,11 @@ You should also have access to a compute credit allocation, also called `bds_tg`
 
 Please commit any code into this repository.
 
+## Data
+* [GEO Data from Stoeckius 2017](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100866)
+* [Stoeckius et al. 2017 Manuscript](https://www.nature.com/nmeth/journal/v14/n9/full/nmeth.4380.html) - CITE-seq
+
+
 ## Resources
 Some planning ideas (from aakrosh):
 
@@ -65,11 +70,6 @@ scRNA data:
 * [Saliba et al. 2016](https://www.nature.com/articles/nmicrobiol2016206) *Single-cell RNA-seq ties macrophage polarization to growth rate of intracellular Salmonella*
 * [Avraham et al. 2015](https://www.ncbi.nlm.nih.gov/pubmed/26343579) *Pathogen Cell-to-Cell Variability Drives Heterogeneity in Host Immune Responses*
 * [Habib et al. 2017](https://www.nature.com/nmeth/journal/v14/n10/full/nmeth.4407.html) - Dronc-seq
-* [Stoeckius et al. 2017](https://www.nature.com/nmeth/journal/v14/n9/full/nmeth.4380.html) - CITE-seq
-
-Pipeline development links:
-* [Looper](http://looper.readthedocs.io/) - my python package that submits pipelines to clusters
-* [Pypiper](http://pypiper.readthedocs.io/) - my python package for building pipelines
 
 Notes on approaches taken:
 * In two scRNA-seq cancer studies, groups identified tumor malignancy/state using CNV analysis of scRNA-seq data (average of normalized expression levels over relatively large stretches of the genome).  This tended to be followed by unsupervised clustering and expression of key marker genes to identify cell types.  One group identified critical/disease distinguishing genes by their principal component loadings/correlation to PC1, PC2 or PC3.  This last step is where supervised machine learning approaches could do a better job.   
