@@ -1,52 +1,68 @@
 options(stringsAsFactors=FALSE)
-setwd("/Users/Cassie/Box Sync/hackathon/data/")
+setwd("/sfs/nfs/blue/ccr5ju/hackathon/data")
 
 #d = read.csv("GSE100866_CBMC_8K_13AB_10X-ADT_clr-transformed.csv.gz", header=TRUE, row.names=1)
 #saveRDS(d, file="CBMC_8K_13AB_10X-ADT_clr-transformed.rds")
 d = readRDS(file="CBMC_8K_13AB_10X-ADT_clr-transformed.rds")
+dt.mat = t(d)
+#dt.mat=t(d)[1:100,]
 dt.df = as.data.frame(t(d))
-#dt.mat = t(d)
-dt.mat = dt.mat[1:100,]
-
-#Look at univariate distributions
-hist(dt.df$CD3)
-hist(dt.df$CD56)
 
 
 #tSNE dimension reduction
-install.packages("tsne")
-library(tsne)
-s = tsne(dt.mat)
-plot(s[,1],s[,2])
+#install.packages("tsne")
+#library(tsne)
+#s = tsne(dt.mat)
+s = readRDS("tsne_vectors.txt")
+
+#Barnes Hut approximation
+#install.packages("Rtsne")
+library(Rtsne)
+#bh = Rtsne(dt.mat)
+#saveRDS(bh, file="tsne_bh_vectors.rds")
+bh=readRDS(file="tsne_bh_vectors.rds")
+
+#principal component analysis
+myPCA <- prcomp(dt.mat, scale. = F, center = F)
+pcs=myPCA$x # scores
+
+#k means
+k=scan(file="../bds_hackathon/results/kmeans/kmeans_10clusters_ADTclr_filtered.csv", sep=",")
+
+##Plots
+pdf("cluster_plots.pdf")
+
+#visualize full data set
+image(dt.mat)
+
+#look at univariate distributions
+for (i in 1:dim(dt.df)[2]){
+	marker=names(dt.df)[i]
+	hist(dt.df[,i], main=marker)
+}
+
+#plot dimension reduction techniques
+plot(s[,1],s[,2], main="tSNE (exact) of Surface Markers", xlab="tSNE1", ylab="tSNE2")
+plot(bh$Y[,1],bh$Y[,2], main="Barnes-Hut tSNE of Surface Markers", xlab="tSNE1", ylab="tSNE2")
+plot(pcs[,"PC1"], pcs[,"PC2"], main="PCA of Surface Markers", xlab="PC1", ylab="PC2")
+pairs(pcs[,1:5])
 
 
-#clustering
-#install.packages("cluster")
-#install.packages("magrittr")
-#install.packages("factoextra")
-library("cluster")
-library("factoextra")
-library("magrittr")
-library("ggplot2")
+#read in filtered tsnes
+library(ggplot2)
+ts=read.table("../bds_hackathon/src/bokeh/tsne_human.txt")
+df=data.frame(k, v1=ts$V2, v2=ts$V3)
+df$cluster=factor(df$k, levels=seq(1,10,by=1), labels=seq(1,10,by=1))
+ggplot(df, aes(x=v1, y=v2, color=cluster)) + geom_point()
 
-#visualize cell clusters
-res.dist <- get_dist(dt.mat, stand = TRUE, method = "pearson")
-pdf("cluster_heatmap_adt.pdf")
-fviz_dist(res.dist, 
-          gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07"))
+
 dev.off()
 
-#hierarchical clustering
-res.hc <- test %>%
-  scale() %>%                    # Scale the data
-  dist(method = "euclidean") %>% # Compute dissimilarity matrix
-  hclust(method = "ward.D2")     # Compute hierachical clustering
-# Visualize using factoextra
-# Cut in 4 groups and color by groups
-fviz_dend(res.hc, k = 4, # Cut in four groups
-          cex = 0.5, # label size
-          k_colors = c("#2E9FDF", "#00AFBB", "#E7B800", "#FC4E07"),
-          color_labels_by_k = TRUE, # color labels by groups
-          rect = TRUE # Add rectangle around groups
-)
+plot(s[,1], s[,2])
+
+##Save data sets
+write.table(s, file="ADT+clustering_tsne_coordinates_exact.txt", col.names=FALSE, row.names=row.names(dt.df), quote=FALSE, sep="\t")
+write.table(bh$Y, file="ADT+clustering_tsne_coordinates_bh.txt", col.names=FALSE, row.names=row.names(dt.df), quote=FALSE, sep="\t")
+write.table(pcs, file="ADT+clustering_principal_components.txt", col.names=TRUE, row.names=TRUE, quote=FALSE, sep="\t")
+
 
