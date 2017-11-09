@@ -49,12 +49,13 @@ pairs(pcs[,1:5])
 
 
 #read in filtered tsnes
-library(ggplot2)
+library(ggplot2s)
 ts=read.table("../bds_hackathon/src/bokeh/tsne_human.txt")
 df=data.frame(k, v1=ts$V2, v2=ts$V3)
-df$cluster=factor(df$k, levels=seq(1,10,by=1), labels=seq(1,10,by=1))
-ggplot(df, aes(x=v1, y=v2, color=cluster)) + geom_point()
+df$cluster=factor(df$k, levels=seq(0,9,by=1), labels=seq(1,10,by=1))
 
+pdf("cluster_tsne_colored_by_kmeans_ADT.pdf")
+ggplot(df, aes(x=v1, y=v2, color=cluster)) + geom_point() + xlab("") + ylab("")
 
 dev.off()
 
@@ -66,3 +67,37 @@ write.table(bh$Y, file="ADT+clustering_tsne_coordinates_bh.txt", col.names=FALSE
 write.table(pcs, file="ADT+clustering_principal_components.txt", col.names=TRUE, row.names=TRUE, quote=FALSE, sep="\t")
 
 
+#Get filtered RNA
+rna=read.csv("../bds_hackathon/data/human_sub.csv.gz", header=TRUE, row.names=1)
+dim(rna)
+head(rna[,1:20])
+trna = t(rna)
+head(trna[,1:20])
+cluster=factor(k, levels=seq(0,9,by=1), labels=seq(1,10,by=1))
+df = data.frame(cluster, trna)
+head(df[,1:20])
+table(df$cluster)
+
+#install.packages("glmnet")
+library(glmnet)
+fit = glmnet(x, y)
+x=trna
+
+coefMat = matrix(NA, nrow=dim(trna)[2]+1, ncol=10)
+#predict cluster 1
+for ( i in 1:10) {
+  y=cluster==i
+  #cvfit.lasso = cv.glmnet(x[1:1000,], y[1:1000], family="binomial", alpha=1)
+  cvfit.alpha5 = cv.glmnet(x, y, family="binomial", alpha=0.5)
+  plot(cvfit.alpha5)
+  coef(cvfit.alpha5, s = "lambda.min")
+  newy=predict(cvfit.alpha5, newx = x[1000:2000,], s = "lambda.min")
+  
+  library(pROC) 
+  #install.packages("pROC")
+  obs = as.numeric(y[1000:2000])-1
+  pred = as.numeric(newy)-1
+  roccurve = roc(obs~pred)
+  plot(roccurve, main=roccurve$auc[1])
+}
+#
