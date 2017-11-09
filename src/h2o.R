@@ -22,13 +22,17 @@ x = geneCols
 
 allDat = cbind(genesDat, adtDat)
 tfFile = paste0(folder, "/training_frame.tsv")
+write.tsv(allDat, file=tfFile)
 write.tsv(tfFile, allDat)
 
-scrna.hex = h2o.uploadFile(tfFile, destination_frame="scrna")
-summary(scrna.hex)
+
+h2o::h2o.init()
+adt.hex = h2o::h2o.uploadFile(tfFile, destination_frame="adt")
+summary(adt.hex)
 dl_fit1 <- h2o::h2o.deeplearning(x = x,
                             y = y,
-                            training_frame = allDat,
+                            training_frame = adt,
                             model_id = "dl_fit1",
                             hidden = c(20,20),
                             seed = 1)
+
