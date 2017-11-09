@@ -3,6 +3,10 @@
 - ~5 slides
 - due 5pm Thursday
 
+collaborative working draft:  
+https://goo.gl/UFwdZU
+
+
 # Presentation
 
 Friday, November 10th between 10:30am – 12:00pm (exact schedule TBA).
